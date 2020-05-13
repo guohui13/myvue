@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!--  router-link 得有链接 渲染成 a标签 router-view 放在哪影响位置
+
+-->
+    <router-view></router-view>
+    <router-link to="/home" tag="button">首页</router-link>
+    <router-link to="/about" tag="button">关于</router-link>
+<!--  点击按钮会出现 router-link-active 这个改写样式  -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'App'
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    .router-link-active {
+        color: red;
+    }
 </style>
