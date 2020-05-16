@@ -11,5 +11,5 @@ new Vue({
 }).$mount('#app')
 
 axios({
-  url:'https://suggest.taobao.com/sug?code=utf-8&q=%E5%8D%AB%E8%A1%A3&callback=cb'
+  url:'http://localhost:8083/queryIncome'
 }).then(res=>{console.log(res)}) //then方法完后就会拿到result，然后打印
