@@ -20,7 +20,8 @@ const router = new VueRouter({ //配置映射关系
             component: Home},
         {path:'/about',
          component: About}
-    ]
+    ],
+    mode: 'history'  // 去掉url中的#，html5的history模式
 })
 
 //3、讲router对象传入Vue实例，在另外的使用中需要import这个router对象
